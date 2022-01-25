@@ -29,7 +29,7 @@ class chapter_1_protect:
     
     def __init__(self):
         super().__init__()
-        self.hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
+        
         
         self.samplepath = os.getcwd() + '\sample'
         self.filesample = "1_table_2.hwp"
@@ -212,6 +212,7 @@ class chapter_1_protect:
     
     def Main(self,host,port,database,user,password):
         
+        self.hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
         dbname = self.DbName
         
 

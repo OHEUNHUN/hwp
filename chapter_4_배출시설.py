@@ -19,7 +19,7 @@ class chapter_4_production:
     
     def __init__(self):
         super().__init__()
-        self.hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
+        
         self.samplepath = os.getcwd() + '\sample'
         self.filesample = "4_table_1.hwp"
         
@@ -568,7 +568,9 @@ class chapter_4_production:
 
 
     def Main(self,host,port,database,user,password):
+        
 
+        self.hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
         dbname_f = self.DbName_f
         'hwp_4_4_f'
         dbname_p = self.DbName_p

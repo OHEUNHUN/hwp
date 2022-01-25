@@ -33,7 +33,7 @@ class chapter_2_Premission:
 
     def __init__(self):
         super().__init__()
-        self.hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
+        
         
         
         self.samplepath = os.getcwd() + '\sample'
@@ -319,7 +319,9 @@ class chapter_2_Premission:
 
 
     def Main(self,host,port,database,user,password):
+        
 
+        self.hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
         dbname = self.DbName
         
         db = dbupdate_update.DBCONN()

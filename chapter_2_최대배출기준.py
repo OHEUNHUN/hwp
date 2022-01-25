@@ -16,7 +16,7 @@ class chapter_2_Max:
     def __init__(self):
         super().__init__()
 
-        self.hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
+        
         self.samplepath = os.getcwd() + '\sample'
         self.filesample = "2_table_1.hwp"
         self.DbName = "hwp_2_2_1"
@@ -253,6 +253,8 @@ class chapter_2_Max:
 
     def Main(self,host,port,database,user,password):
 
+
+        self.hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
         dbname = self.DbName
 
         db = dbupdate_update.DBCONN()
